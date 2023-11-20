@@ -1,5 +1,5 @@
 {
-  "name": "education-academia",
+  "name": "Pflege",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,8 +11,15 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "geocoder": "^0.2.3",
+    "geolib": "^3.3.4",
     "google-maps-react": "^2.0.6",
     "material-icons": "^1.10.11",
+    "node-geocoder": "^4.2.0",
+    "nodemon": "^3.0.1",
+    "noty": "^3.2.0-beta-deprecated",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^5.3.1",
@@ -23,7 +30,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server",
+    "dev": "nodemon server",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -45,5 +53,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.3.3"
   }
 }

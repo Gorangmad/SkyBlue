@@ -17,7 +17,7 @@
   margin-top: 50px;
 }
 .aboutHome .item {
-  background-color: #fff;
+  background-color: #ffffff;
   margin-top: 30px;
   padding: 20px;
   transition: 0.5s;
@@ -45,6 +45,69 @@
 .aboutHome .item:hover p {
   color: #fff;
 }
+
+
+/* Add these styles to your CSS file */
+.blue-heading {
+  color: #1eb2a6;
+  margin-bottom: 10px;
+  text-align: center; /* Center-align the heading */
+}
+
+.bullet-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.bullet-list li {
+  list-style-type: disc;
+  margin-bottom: 5px;
+}
+
+.additional-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto; /* Updated margin for centering */
+  max-width: 1200px; /* Added max-width for responsiveness */
+}
+
+.card {
+  width: 30%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Align text to the left within the card */
+  margin-bottom: 20px; /* Adjust margin for better spacing between cards */
+  transition: background-color 0.3s, color 0.3s; /* Add transition effect */
+}
+
+.card:hover {
+  background-color: #1eb2a6; /* Change background color on hover */
+}
+
+.blue-heading:hover {
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-align: center; /* Center-align the heading */
+}
+
+.card-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center; /* Align text to the left within the card */
+}
+
+.card p {
+  flex-grow: 1;
+}
+
+
+
+
+
+
 /*----------awrapper------------*/
 .awrapper {
   background-image: url("../../../public/images/awrapper.webp");

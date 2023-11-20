@@ -16,22 +16,16 @@ const Header = () => {
               <Link to='/'>Home</Link>
             </li>
             <li>
-              <Link to='/courses'>All Courses</Link>
+              <Link to='/about'>Über Uns</Link>
             </li>
             <li>
-              <Link to='/about'>About</Link>
+              <Link to='/courses'>Unsere Leistungen</Link>
             </li>
             <li>
               <Link to='/team'>Team</Link>
             </li>
             <li>
-              <Link to='/pricing'>Pricing</Link>
-            </li>
-            <li>
-              <Link to='/journal'>Journal</Link>
-            </li>
-            <li>
-              <Link to='/contact'>Contact</Link>
+              <Link to='/contact'>Kontaktieren sie uns</Link>
             </li>
           </ul>
           <div className='start'>

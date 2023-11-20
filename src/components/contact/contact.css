@@ -28,6 +28,11 @@
   outline: none;
   border: 1px solid grey;
 }
+.contacts form select {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+}
 form .flexSB input:nth-child(1) {
   margin-right: 10px;
 }
@@ -42,6 +47,8 @@ form .flexSB input:nth-child(1) {
   font-size: 15px;
   word-spacing: 5px;
 }
+
+
 @media screen and (max-width: 768px) {
   .contacts .container {
     flex-direction: column;
