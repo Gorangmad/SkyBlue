@@ -59,3 +59,15 @@
     margin-top: 20px;
   }
   
+
+  /*----------awrapper------------*/
+@media screen and (max-width: 768px) {
+    .form1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    max-width: 50%;
+    padding: 20px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in the width calculation */
+  }
+}
