@@ -22,15 +22,9 @@ const Header = () => {
               <Link to='/courses'>Unsere Leistungen</Link>
             </li>
             <li>
-              <Link to='/team'>Team</Link>
-            </li>
-            <li>
               <Link to='/contact'>Kontaktieren sie uns</Link>
             </li>
           </ul>
-          <div className='start'>
-            <div className='button'>GET CERTIFICATE</div>
-          </div>
           <button className='toggle' onClick={() => setClick(!click)}>
             {click ? <i className='fa fa-times'> </i> : <i className='fa fa-bars'></i>}
           </button>

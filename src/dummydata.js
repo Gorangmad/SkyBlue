@@ -1,21 +1,8 @@
 export const homeAbout = [
   {
-    id: 1,
-    cover: "https://img.icons8.com/dotty/80/000000/storytelling.png",
-    title: "Gründung",
-    desc: "Den Pflegedienst gibt es seit dem 15.12.2021 das streben nach maximaler Lebensqualität ist unsere Philosophie. Wir sind ein sehr familiärer Pflegedienst, der seinen Fokus auf den Wohl der Kunden legt. Ihr Zuhause ist ihr Reich und das ist uns auch bewusst. ",
-  },
-  {
-    id: 1,
-    cover: "https://img.icons8.com/ios/80/000000/diploma.png",
-    title: "Qualifikationen",
-    desc: "Wir als zugelassener Pflege- und Betreuungsdienst, können mit den Kranken- und Pflegekassen abrechnen.",
-  },
-  {
-    id: 1,
-    cover: "https://img.icons8.com/ios/80/000000/athlete.png",
-    title: "Unsere Expertise",
-    desc: "Ganz egal ob Unterstützung im Alltag, das Anziehen von Kompressionstrümpfen, Medikamentengabe oder körperliche Pflege, wir sind für Sie da.",
+    title: "Ihr Parkservice für den Frankfurter Flughafen",
+    desc: "Wir verfügen über 80 Parkplätze auf einer asphaltierten Fläche. Diese wird rund um die Uhr vom Personal und per Videoüberwachung beobachtet. Deshalb brauchen sie sich um ihr Fahrzeug nicht sorgen. Bei uns ist ihr Fahrzeug sicher und am besten aufgehoben. Starten sie ihre Reise mit Skyblue-parking, unbekümmert und frei von jeglichen Sorgen. Der nächste Urlaub oder die nächste Geschäftsreise steht an, machen sie es sich bequem und einfach. Für sie übernehmen wir den Stress. ",
+
   },
 ]
 export const awrapper = [
@@ -171,86 +158,16 @@ export const coursesCard = [
 ]
 export const online = [
   {
-    cover: "./images/back.webp",
-    hoverCover: "./images/back.webp",
-    courseName: "Grundpflege",
+    courseName: "Innen und Außenreinigung",
   },
   {
-    cover: "./images/c.webp",
-    hoverCover: "./images/c.webp",
-    courseName: "Behandlungspflege",
+    courseName: "Außenreinigung",
   },
   {
-    cover: "./images/b.webp",
-    hoverCover: "./images/b.webp",
-    courseName: "Beratungsansatz",
+    courseName: "Tanken",
   },
   {
-    cover: "./images/b.webp",
-    hoverCover: "./images/b.webp",
-    courseName: "Verhinderungspflege",
-  },
-  {
-    cover: "./images/back.webp",
-    hoverCover: "./images/back.webp",
-    courseName: "Grundpflege",
-  },
-  {
-    cover: "./images/c.webp",
-    hoverCover: "./images/c.webp",
-    courseName: "Behandlungspflege",
-  },
-  {
-    cover: "./images/b.webp",
-    hoverCover: "./images/b.webp",
-    courseName: "Beratungsansatz",
-  },
-  {
-    cover: "./images/b.webp",
-    hoverCover: "./images/b.webp",
-    courseName: "Verhinderungspflege",
-  },
-]
-export const team = [
-  {
-    cover: "./images/team/t1.webp",
-    name: "Adrian Molises",
-    work: "Helfer",
-  },
-  {
-    cover: "./images/team/t2.webp",
-    name: "Arthur MaGregor",
-    work: "Helfer",
-  },
-  {
-    cover: "./images/team/t3.webp",
-    name: "Anna Hanzen",
-    work: "Leiterin",
-  },
-  {
-    cover: "./images/team/t1.webp",
-    name: "Adrian Molises",
-    work: "Helfer",
-  },
-  {
-    cover: "./images/team/t2.webp",
-    name: "Arthur MaGregor",
-    work: "Helfer",
-  },
-  {
-    cover: "./images/team/t3.webp",
-    name: "Anna Hanzen",
-    work: "Leiterin",
-  },
-  {
-    cover: "./images/team/t1.webp",
-    name: "Adrian Molises",
-    work: "Helfer",
-  },
-  {
-    cover: "./images/team/t2.webp",
-    name: "Arthur MaGregor",
-    work: "Helfer",
+    courseName: "Ölwechsel",
   },
 ]
 export const price = [

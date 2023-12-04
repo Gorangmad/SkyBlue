@@ -4,6 +4,7 @@
 .aboutHome #heading {
   text-align: left;
   padding: 0;
+  color: #ffffff;
 }
 .aboutHome .left img {
   width: 100%;
@@ -17,7 +18,7 @@
   margin-top: 50px;
 }
 .aboutHome .item {
-  background-color: #ffffff;
+  background-color: #171717;
   margin-top: 30px;
   padding: 20px;
   transition: 0.5s;
@@ -29,107 +30,20 @@
   width: 70px;
   height: 70px;
 }
+.aboutHome .img  .icon{
+  color: #ffffff;
+}
 .aboutHome .item h2 {
   font-size: 20px;
   margin-bottom: 15px;
+  color: #ffffff;
 }
 .aboutHome .item p {
-  color: #999999;
-}
-.aboutHome .item:hover {
-  background-color: #1eb2a6;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
-}
-.aboutHome .item:hover p {
-  color: #fff;
-}
-
-
-/* Add these styles to your CSS file */
-.blue-heading {
-  color: #1eb2a6;
-  margin-bottom: 10px;
-  text-align: center; /* Center-align the heading */
-}
-
-.bullet-list {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-.bullet-list li {
-  list-style-type: disc;
-  margin-bottom: 5px;
-}
-
-.additional-section {
-  display: flex;
-  justify-content: space-between;
-  margin: 50px auto; /* Updated margin for centering */
-  max-width: 1200px; /* Added max-width for responsiveness */
-}
-
-.card {
-  width: 30%;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  text-align: center; /* Align text to the left within the card */
-  margin-bottom: 20px; /* Adjust margin for better spacing between cards */
-  transition: background-color 0.3s, color 0.3s; /* Add transition effect */
-}
-
-.card:hover {
-  background-color: #1eb2a6; /* Change background color on hover */
-}
-
-.blue-heading:hover {
   color: #ffffff;
-  margin-bottom: 10px;
-  text-align: center; /* Center-align the heading */
-}
-
-.card-inner {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center; /* Align text to the left within the card */
-}
-
-.card p {
-  flex-grow: 1;
 }
 
 
 
-
-
-
-/*----------awrapper------------*/
-.awrapper {
-  background-image: url("../../../public/images/awrapper.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 30vh;
-  color: #fff;
-}
-.awrapper .box {
-  padding: 70px 0;
-}
-.awrapper img {
-  margin-right: 30px;
-}
-.awrapper h1 {
-  font-size: 50px;
-}
-.awrapper h3 {
-  font-size: 20px;
-  font-weight: 500;
-}
 /*----------awrapper------------*/
 @media screen and (max-width: 768px) {
   .aboutHome .container {
@@ -137,8 +51,5 @@
   }
   .aboutHome .row {
     width: 100%;
-  }
-  .awrapper {
-    height: 50vh;
   }
 }

@@ -1,0 +1,86 @@
+
+.form2 {
+  margin-top: 40px;
+  margin-bottom: 40px; /* Add margin at the bottom */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.buchen {
+  margin-top: 20px; /* Reduce top margin */
+  margin-bottom: 20px; /* Add bottom margin */
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+/* ... (rest of your styles) */
+
+
+
+
+label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: #333333;
+}
+
+.name-group {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.vehicle-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flight-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name-group .first-name,
+.name-group .last-name,
+.vehicle-group .kennzeichen,
+.vehicle-group .automarke,
+.flight-group .hinflug,
+.flight-group .rueckflug {
+  width: 48%;
+  margin-bottom: 5px; /* Adjust the margin as needed */
+}
+
+input {
+  padding: 10px;
+  border: 2px solid #333;
+  color:grey;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+
+button {
+  padding: 10px;
+  background-color: #00ff99;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #00803d;
+}
+
+
+

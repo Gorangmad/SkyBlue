@@ -9,17 +9,44 @@
 .contacts h1 {
   font-size: 30px;
   font-weight: 400;
+  color: #ffffff;
 }
 .contacts p {
   color: grey;
 }
+/* ... (your existing styles) */
+
 .contacts .items {
   margin: 30px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
 }
+
+.contacts .box {
+  text-align: center;
+}
+
+.contacts .box i {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffffff; /* Set icon color to white */
+}
+
 .contacts .box p {
-  font-size: 17px;
-  margin-top: 10px;
+  color: #ffffff;
+  margin: 0;
+  font-size: 14px;
 }
+
+.contacts input,
+.contacts textarea,
+.contacts form select {
+  color: #000000;
+}
+
+/* ... (your existing styles) */
+
 .contacts textarea,
 .contacts input {
   width: 100%;
@@ -42,11 +69,55 @@ form .flexSB input:nth-child(1) {
   margin-bottom: 10px;
 }
 .contacts span {
-  color: #1eb2a6;
+  color: #0077be;
   font-weight: 600;
   font-size: 15px;
   word-spacing: 5px;
 }
+
+/* Add this CSS to your existing contact.css file or create a new one */
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff; /* Change the color as needed */
+}
+
+.icon {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #fff; /* Change the color as needed */
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.error-message {
+  color: #dc3545; /* Change the color as needed */
+  margin-top: 5px;
+}
+
+.primary-btn {
+  background-color: #007bff; /* Change the color as needed */
+  color: #fff; /* Change the color as needed */
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.primary-btn:hover {
+  background-color: #0056b3; /* Change the color as needed */
+}
+
 
 
 @media screen and (max-width: 768px) {

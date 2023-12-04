@@ -1,6 +1,11 @@
+.testimonal{
+  background-color: #fff;
+}
 .testimonal .items {
   padding: 30px;
   transition: 0.5s;
+  background-color: #fff; /* Set default card background color */
+  color: #000; /* Set default text color */
 }
 
 .testimonal .img {
@@ -15,8 +20,8 @@
   position: absolute;
   bottom: 0;
   left: 60px;
-  background-color: #212323;
-  color: #fff;
+  background-color: #fff;
+  color: #171717;
 }
 .testimonal .name {
   margin: 25px;
@@ -26,23 +31,59 @@
   margin-bottom: 5px;
 }
 .testimonal .name span {
-  color: #1eb2a6;
+  color: #00183a;
 }
 .testimonal p {
   margin-top: 20px;
-  color: grey;
+  color: black;
   transition: 0.5s;
 }
 .testimonal .items:hover {
-  background-color: #1eb2a6;
+  background-color: #00183a;
   color: #fff;
   cursor: pointer;
 }
 .testimonal .items:hover span,
 .testimonal .items:hover p {
-  color: #fff;
+  color: #ffffff;
 }
 .testimonal .items:hover i {
-  background-color: #fff;
-  color: #1eb2a6;
+  background-color: #ffffff;
+  color: #00183a;
 }
+
+/* Your existing styles for larger screens */
+
+/* Media query for smaller screens */
+/* ... (your existing styles) */
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .testimonal .content.grid2 {
+    grid-template-columns: 1fr; /* Set the number of columns to 1 for smaller screens */
+  }
+  
+  .testimonal .items {
+    width: 100%; /* Set the width to 100% for smaller screens */
+    margin-bottom: 20px; /* Add margin between items */
+  }
+
+  .testimonal .img {
+    text-align: center; /* Center the image within the container */
+  }
+
+  .testimonal i {
+    position: static; /* Remove absolute positioning for the icon */
+    display: block; /* Make the icon a block element to center it within the container */
+    margin: 10px auto; /* Center the icon horizontally */
+    background-color: #fff;
+    color: #171717;
+  }
+
+  .testimonal .name {
+    margin: 15px; /* Adjust margin for smaller screens */
+    text-align: center; /* Center the text within the container */
+  }
+}
+
+

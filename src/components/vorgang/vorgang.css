@@ -1,0 +1,62 @@
+.additional-section {
+    background-color: #fff; /* Set background color */
+    padding: 60px; /* Add more padding to the top */
+  }
+  
+  .vorgang-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .heading {
+    color: black;
+  }
+  
+  .card {
+    background-color: #00183a;
+    color: white;
+    border-radius: 10px;
+    padding: 40px; /* Adjust the padding as needed */
+    width: 200px; /* Adjust the width as needed */
+    text-align: center;
+  }
+
+  .card-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-inner i {
+    font-size: 80px; /* Increase the icon size */
+    margin-bottom: 5px;
+  }
+  
+  .heading {
+    margin-bottom: 40px; /* Add some margin to the bottom of the header */
+  }
+  
+  .arrow {
+    font-size: 58px; /* Adjust the size as needed */
+    color: black; /* Arrow color */
+    padding: 0 10px; /* Add some padding to the arrows */
+    margin-top: 20px; /* Adjust the margin as needed */
+  }
+
+  /* Media query for smaller screens */
+@media (max-width: 768px) {
+  .vorgang-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .arrow {
+    transform: rotate(90deg); /* Rotate the arrow 90 degrees */
+    font-size: 100px;/* Add some margin to the right of the arrow */
+    margin-left: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+}

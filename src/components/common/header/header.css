@@ -1,7 +1,7 @@
 /*--------head------------*/
 .head {
   padding: 20px 0;
-  color: #1eb2a6;
+  color: #ffffff;
 }
 .logo h1 {
   font-size: 35px;
@@ -13,7 +13,7 @@
 /*--------head------------*/
 /*--------header------------*/
 header {
-  background-color: #1eb2a6;
+  background-color: #00183a;
   margin: 0 30px;
 }
 header .nav {
@@ -26,17 +26,17 @@ header ul {
   padding: 30px 20px;
 }
 header ul li a {
-  color: #fff;
+  color: #ffffff;
   font-weight: 500;
   transition: 0.5s;
 }
 header ul li a:hover {
-  color: #ffffff;
+  color: #000000;
 }
 .start {
   background-color: #ffffff;
   padding: 30px 70px;
-  color: #fff;
+  color: #171717;
   clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%);
 }
 .toggle {
@@ -49,7 +49,7 @@ header ul li a:hover {
   }
   header {
     margin: 0;
-    background-color: #1eb2a6;
+    background-color: #0077be;
     position: relative;
   }
   header ul.flexSB {
@@ -61,7 +61,7 @@ header ul li a:hover {
   .toggle {
     display: block;
     background: none;
-    color: #fff;
+    color: #ffffff;
     font-size: 30px;
     position: absolute;
     right: 0;
@@ -72,6 +72,6 @@ header ul li a:hover {
     top: 7vh;
     left: 0;
     width: 100%;
-    background-color: #1eb2a6;
+    background-color: #0077be;
   }
 }
