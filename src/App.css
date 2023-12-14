@@ -44,7 +44,7 @@ li {
 button {
   padding: 17px 30px;
   background-color: #171717;
-  color: #00183a;
+  color: #ffffff;
   font-weight: 600;
   border: none;
   margin: 30px 10px 0 0;
@@ -61,7 +61,7 @@ button:hover {
 }
 .primary-btn {
   background-color: #0077be;
-  color: #171717;
+  color: #ffffff;
 }
 
 /*------------global-----------*/

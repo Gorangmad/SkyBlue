@@ -94,7 +94,7 @@ const BuchenCard = () => {
 
   return (
     <>
-      <section className='buchen'>
+      <section className="buchen">
         <form onSubmit={handleSubmit} classNAme="form2">
         <div className="name-group">
     <div className="first-name">

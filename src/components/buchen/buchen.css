@@ -7,6 +7,8 @@
   justify-content: space-between;
 }
 
+
+
 .buchen {
   margin-top: 20px; /* Reduce top margin */
   margin-bottom: 20px; /* Add bottom margin */
@@ -67,7 +69,7 @@ input {
 }
 
 
-button {
+.button {
   padding: 10px;
   background-color: #00ff99;
   color: #ffffff;
@@ -78,7 +80,7 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
+.button:hover {
   background-color: #00803d;
 }
 

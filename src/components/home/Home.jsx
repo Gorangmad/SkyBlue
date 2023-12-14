@@ -14,7 +14,6 @@ const Home = () => {
       <Availability />
       <VorgangCard />
       <HAbout />
-      <Testimonal />
 
     </>
   )

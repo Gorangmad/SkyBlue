@@ -3,9 +3,6 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const app = express();
 const nodemailer = require('nodemailer');
-const { time } = require('console');
-const { SystemUpdateOutlined } = require('@mui/icons-material');
-const env = require('dotenv').config()
 
 
 // Serve static files
@@ -30,6 +27,7 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EP
   }
 });
+
 
 
 // Handle form submission

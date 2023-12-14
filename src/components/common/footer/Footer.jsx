@@ -21,16 +21,14 @@ const Footer = () => {
             <ul>
               <li>
                 <i className='fa fa-map'></i>
-                Test 64<br /> 65929 Frankfurt am Main
+                Düsseldorferstraße. 32
+                <br />Eschborn, 65760
                 </li>
               <li>
                 <i className='fa fa-phone-alt'></i>
                 01234567
               </li>
-              <li>
-              <i className='fa fa-fax'></i>
-                0123456789
-              </li>
+            
               <li>
                 <i className='fa fa-paper-plane'></i>
                 Info@skyblueparking.de
@@ -41,7 +39,7 @@ const Footer = () => {
       </footer>
       <div className='legal'>
         <p>
-          Copyright ©2022 All rights reserved | This template is made with by WeDo
+          <a href="/Datenschutz">Datenschutz</a> | <a href="/Impressum">Impressum</a> | <a href="/AGB">AGB</a> 
         </p>
       </div>
     </>

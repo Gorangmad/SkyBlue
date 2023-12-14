@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarAlt, faPlaneDeparture, faPlaneArrival } from "@fortawesome/free-solid-svg-icons";
+import Heading from "../common/heading/Heading";
 import "./avai.css";
 
 // ... (import statements)
@@ -45,6 +46,7 @@ const AvaiCard = () => {
           <path fill="#171717" fillOpacity="1.00" d="M0,192L48,170.7C96,149,192,107,288,74.7C384,43,480,21,576,53.3C672,85,768,171,864,181.3C960,192,1056,128,1152,122.7C1248,117,1344,171,1392,197.3L1440,224L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
         </svg>
         <section className='your-section-content'>
+        <Heading title="Buchen sie Jetzt!" className="heading" />
           <form onSubmit={handleSubmit} className="form1">
             <div className="form-group">
               <label htmlFor="hinflugDate">

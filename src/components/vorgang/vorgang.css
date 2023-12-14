@@ -22,6 +22,12 @@
     text-align: center;
   }
 
+  
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
   .card-inner {
     display: flex;
     flex-direction: column;
