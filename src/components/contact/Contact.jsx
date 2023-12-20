@@ -92,7 +92,7 @@ const ContactForm = () => {
             <div className="items grid2">
               <div className="box">
                 <i className="fa fa-phone-alt"></i>
-                <p>061067797307</p>
+                <p>+49 176 12436787</p>
               </div>
               <div className="box">
                 <i className="fa fa-paper-plane"></i>
