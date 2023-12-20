@@ -25,6 +25,7 @@
     height: 40vh;
   }
   .hero {
+    background: #00183a; /* Changed from background-image to background and set color to blue */
     background-position: right;
     padding-top: 50%;
     height: 80vh;
