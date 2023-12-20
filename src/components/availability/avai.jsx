@@ -47,37 +47,38 @@ const AvaiCard = () => {
         </svg>
         <section className='your-section-content'>
         <Heading title="Buchen sie Jetzt!" className="heading" />
-          <form onSubmit={handleSubmit} className="form1">
-            <div className="form-group">
-              <label htmlFor="hinflugDate">
-                <FontAwesomeIcon icon={faPlaneDeparture} />
-                Hinflug Datum
-              </label>
-              <input type="date" id="hinflugDate" name="hinflugDate" />
-              <label htmlFor="hinflugTime">
-                Hinflug Zeit
-              </label>
-              <input type="time" id="hinflugTime" name="hinflugTime" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="rueckflugDate">
-                <FontAwesomeIcon icon={faPlaneArrival} />
-                Rückflug Datum
-              </label>
-              <input type="date" id="rueckflugDate" name="rueckflugDate" />
-              <label htmlFor="rueckflugTime">
-                Rückflug Zeit
-              </label>
-              <input type="time" id="rueckflugTime" name="rueckflugTime" />
-            </div>
-            <button type="submit" a>
-              <FontAwesomeIcon icon={faCalendarAlt} />
-              Verfügbarkeit prüfen
-            </button>
-          </form>
-        </section>
-        <div className="bottom-border"></div>
-      </section>
+<form onSubmit={handleSubmit} className="form1">
+  <div className="form-group">
+    <label htmlFor="hinflugDate">
+      <FontAwesomeIcon icon={faPlaneDeparture} />
+      Hinflug Datum
+    </label>
+    <input type="date" id="hinflugDate" name="hinflugDate" placeholder="TT.MM.JJJJ" />
+    <label htmlFor="hinflugTime">
+      Hinflug Zeit
+    </label>
+    <input type="time" id="hinflugTime" name="hinflugTime" placeholder="HH:MM" />
+  </div>
+  <div className="form-group">
+    <label htmlFor="rueckflugDate">
+      <FontAwesomeIcon icon={faPlaneArrival} />
+      Rückflug Datum
+    </label>
+    <input type="date" id="rueckflugDate" name="rueckflugDate" placeholder="TT.MM.JJJJ" />
+    <label htmlFor="rueckflugTime">
+      Rückflug Zeit
+    </label>
+    <input type="time" id="rueckflugTime" name="rueckflugTime" placeholder="HH:MM" />
+  </div>
+  <button type="submit">
+    <FontAwesomeIcon icon={faCalendarAlt} />
+    Verfügbarkeit prüfen
+  </button>
+</form>
+</section>
+<div className="bottom-border"></div>
+</section>
+
     </>
   );
 };
