@@ -53,22 +53,22 @@ const AvaiCard = () => {
       <FontAwesomeIcon icon={faPlaneDeparture} />
       Hinflug Datum
     </label>
-    <input type="date" id="hinflugDate" name="hinflugDate" placeholder="TT.MM.JJJJ" />
+    <input type="date" id="hinflugDate" name="hinflugDate" placeholder="Datum" />
     <label htmlFor="hinflugTime">
       Hinflug Zeit
     </label>
-    <input type="time" id="hinflugTime" name="hinflugTime" placeholder="HH:MM" />
+    <input type="time" id="hinflugTime" name="hinflugTime" placeholder="Zeit" />
   </div>
   <div className="form-group">
     <label htmlFor="rueckflugDate">
       <FontAwesomeIcon icon={faPlaneArrival} />
       Rückflug Datum
     </label>
-    <input type="date" id="rueckflugDate" name="rueckflugDate" placeholder="TT.MM.JJJJ" />
+    <input type="date" id="rueckflugDate" name="rueckflugDate" placeholder="Datum" />
     <label htmlFor="rueckflugTime">
       Rückflug Zeit
     </label>
-    <input type="time" id="rueckflugTime" name="rueckflugTime" placeholder="HH:MM" />
+    <input type="time" id="rueckflugTime" name="rueckflugTime" placeholder="Zeit" />
   </div>
   <button type="submit">
     <FontAwesomeIcon icon={faCalendarAlt} />

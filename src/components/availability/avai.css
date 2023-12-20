@@ -54,10 +54,3 @@ input {
   background-color: #ffffff;
   margin-top: 20px;
 }
-
-@media screen and (max-width: 768px) {
-  .form1 {
-    margin-left: 20px; /* Reduced margin-left for better visibility on small screens */
-    max-width: 90%; /* Increased max-width for better use of available space */
-  }
-}
