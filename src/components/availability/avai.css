@@ -69,4 +69,11 @@
     padding: 20px; /* Add padding for spacing */
     box-sizing: border-box; /* Include padding in the width calculation */
   }
+  input {
+    font-size: 14px; /* Adjust font size if needed */
+  }
+
+  label {
+    font-size: 16px; /* Adjust label size for better visibility */
+  }
 }
