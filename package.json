@@ -27,10 +27,12 @@
     "nodemon": "^3.0.1",
     "noty": "^3.2.0-beta-deprecated",
     "react": "^18.1.0",
+    "react-datepicker": "^4.25.0",
     "react-dom": "^18.1.0",
     "react-router-dom": "^5.3.1",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
+    "react-time-picker": "^6.6.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"

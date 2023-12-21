@@ -1,35 +1,39 @@
-import React from "react";
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarAlt, faPlaneDeparture, faPlaneArrival } from "@fortawesome/free-solid-svg-icons";
 import Heading from "../common/heading/Heading";
+import DatePicker from 'react-datepicker';
+import TimePicker from 'react-time-picker';
+import "react-datepicker/dist/react-datepicker.css";
+
 import "./avai.css";
 
-// ... (import statements)
-
-// ... (import statements)
-
 const AvaiCard = () => {
+  const [hinflugDate, setHinflugDate] = useState(new Date());
+  const [hinflugTime, setHinflugTime] = useState('10:00');
+  const [rueckflugDate, setRueckflugDate] = useState(new Date());
+  const [rueckflugTime, setRueckflugTime] = useState('10:00');
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const hinflugDate = e.target.hinflugDate.value;
-    const hinflugTime = e.target.hinflugTime.value;
-    const rueckflugDate = e.target.rueckflugDate.value;
-    const rueckflugTime = e.target.rueckflugTime.value;
-
+  
     try {
-      // Make a POST request to the backend to save the dates and times
+      // Use state values directly
       const response = await fetch('/send-datum', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ hinflugDate, hinflugTime, rueckflugDate, rueckflugTime }),
+        body: JSON.stringify({ 
+          hinflugDate: hinflugDate.toISOString(), // Or format it as needed
+          hinflugTime,
+          rueckflugDate: rueckflugDate.toISOString(), // Or format it as needed
+          rueckflugTime 
+        }),
       });
-
+  
       if (response.ok) {
         console.log("Form submitted!");
-
         window.location.href = '/buchen';
       } else {
         console.error('Failed to save dates and times');
@@ -38,6 +42,7 @@ const AvaiCard = () => {
       console.error('Error:', error);
     }
   };
+  
 
   return (
     <>
@@ -47,29 +52,37 @@ const AvaiCard = () => {
         </svg>
         <section className='your-section-content'>
         <Heading title="Buchen sie Jetzt!" className="heading" />
-<form onSubmit={handleSubmit} className="form1">
-  <div className="form-group">
-    <label htmlFor="hinflugDate">
-      <FontAwesomeIcon icon={faPlaneDeparture} />
-      Hinflug Datum
-    </label>
-    <input type="date" id="hinflugDate" name="hinflugDate" placeholder="Datum" />
-    <label htmlFor="hinflugTime">
-      Hinflug Zeit
-    </label>
-    <input type="time" id="hinflugTime" name="hinflugTime" placeholder="Zeit" />
-  </div>
-  <div className="form-group">
-    <label htmlFor="rueckflugDate">
-      <FontAwesomeIcon icon={faPlaneArrival} />
-      Rückflug Datum
-    </label>
-    <input type="date" id="rueckflugDate" name="rueckflugDate" placeholder="Datum" />
-    <label htmlFor="rueckflugTime">
-      Rückflug Zeit
-    </label>
-    <input type="time" id="rueckflugTime" name="rueckflugTime" placeholder="Zeit" />
-  </div>
+        <form onSubmit={handleSubmit} className="form1">
+        <div className="form-group">
+          <label>
+            <FontAwesomeIcon icon={faPlaneDeparture} />
+            Hinflug Datum und Zeit
+          </label>
+          <DatePicker 
+            selected={hinflugDate} 
+            onChange={date => setHinflugDate(date)}
+            dateFormat="dd.MM.yyyy"
+          />
+          <TimePicker 
+            value={hinflugTime}
+            onChange={setHinflugTime}
+          />
+        </div>
+        <div className="form-group">
+          <label>
+            <FontAwesomeIcon icon={faPlaneArrival} />
+            Rückflug Datum und Zeit
+          </label>
+          <DatePicker 
+            selected={rueckflugDate} 
+            onChange={date => setRueckflugDate(date)}
+            dateFormat="dd.MM.yyyy"
+          />
+          <TimePicker 
+            value={rueckflugTime}
+            onChange={setRueckflugTime}
+          />
+        </div>
   <button type="submit">
     <FontAwesomeIcon icon={faCalendarAlt} />
     Verfügbarkeit prüfen

@@ -57,23 +57,82 @@
     background-color: #ffffff;
     margin-top: 20px;
   }
+
+  .react-datepicker-wrapper,
+.react-datepicker__input-container,
+.react-time-picker {
+  width: 100%; /* Adjust width */
+}
+
+.react-datepicker-wrapper,
+.react-time-picker {
+  margin-bottom: 15px; /* Spacing between inputs */
+}
+
+.react-time-picker__clock,
+.react-time-picker__inputGroup {
+  font-size: 16px; /* Adjust font size */
+}
+
+.react-time-picker__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.react-time-picker__inputGroup {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.react-time-picker__inputGroup__input {
+  width: auto; /* Adjust width as needed */
+  min-width: 4em;
+}
+
+.react-time-picker__inputGroup__leadingZero{
+  display: none;
+}
+
+.react-time-picker__clear-button {
+  display: none; /* Hide if not needed */
+}
+
+/* Additional custom styles */
+
+
+.react-time-picker {
+  /* Adjust the main container of the time picker */
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: white;
+}
+
+.react-time-picker__button {
+  display:none;
+}
+
+/* Add more specific styles as needed */
+
+
+/* Add more custom styles as needed */
+
   
 
-  /*----------awrapper------------*/
-@media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     .form1 {
-    display: flex;
-    flex-direction: column;
-    margin-left: 100px;
-    max-width: 50%;
-    padding: 20px; /* Add padding for spacing */
-    box-sizing: border-box; /* Include padding in the width calculation */
+      margin-left: 20px; /* Adjusted for smaller screens */
+      max-width: 90%; /* Better use of screen width */
+    }
+  
+    input, label {
+      font-size: 14px; /* Smaller font size for better fit */
+    }
+  
+    .form-group {
+      margin-bottom: 15px; /* Adjust spacing between form groups */
+    }
   }
-  input {
-    font-size: 14px; /* Adjust font size if needed */
-  }
-
-  label {
-    font-size: 16px; /* Adjust label size for better visibility */
-  }
-}
+  

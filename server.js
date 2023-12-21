@@ -36,8 +36,8 @@ app.post('/send-email', (req, res) => {
 
   // Construct the email message
   const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: process.env.EMAIL_USER, // Replace with the recipient's email
+    from:'info@skyblueparking.com', // Sender address
+    to: 'info@skyblueparking.com', // Replace with the recipient's email
     subject: 'New Contact Form Submission',
     html: `
       <p><strong>Vorname:</strong> ${formData.Vorname}</p>
