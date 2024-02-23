@@ -19,14 +19,13 @@ app.get('*', (req, res) => {
 
 
 const transporter = nodemailer.createTransport({
-  host: 'smtp.strato.de',
-  port: 587, // Use 587 for TLS
-  secure: false, // true for 465, false for other ports
+  service: 'gmail',
   auth: {
-    user: 'info@skyblueparking.com',
-    pass: process.env.EP
+    user: 'noreplyskyblueparking@gmail.com',
+    pass: "enet dimj czep wbyd" // Your Gmail password or App password
   }
 });
+
 
 
 
@@ -36,7 +35,7 @@ app.post('/send-email', (req, res) => {
 
   // Construct the email message
   const mailOptions = {
-    from:'info@skyblueparking.com', // Sender address
+    from:'noreplyskyblueparking@gmail.com', // Sender address
     to: 'info@skyblueparking.com', // Replace with the recipient's email
     subject: 'New Contact Form Submission',
     html: `
@@ -107,20 +106,18 @@ app.post('/calculate-price', (req, res) => {
 app.post('/send-buchung', (req, res) => {
   const formData = req.body;
 
-  // Create a transporter using SMTP transport
   const transporter = nodemailer.createTransport({
-    host: 'smtp.strato.de',
-    port: 587,
-    secure: false, // Set to true if your provider requires SSL/TLS
+    service: 'gmail',
     auth: {
-      user: 'info@skyblueparking.com', // Replace with your Strato email
-      pass: process.env.EP, // Replace with your Strato email password or an app password
-    },
+      user: 'noreplyskyblueparking@gmail.com',
+      pass: "enet dimj czep wbyd" // Your Gmail password or App password
+    }
   });
+
 
   // Construct the email message
   const mailOptions = {
-    from: 'info@skyblueparking.com', // Sender address
+    from: 'noreplyskyblueparking@gmail.com', // Sender address
     to: 'info@skyblueparking.com', // Replace with the recipient's email
     subject: 'Neue Buchung', // Email subject
     html: `
@@ -137,7 +134,7 @@ app.post('/send-buchung', (req, res) => {
       <p><strong>Rückflug Datum:</strong> ${rueckflugDate}</p>
       <p><strong>Rückflugzeit:</strong> ${rueckflugZeit}</p>
       <p><strong>Farbe:</strong> ${formData.Farbe}</p>
-      <p><strong>Farbe:</strong> ${price}</p>
+      <p><strong>Preis:</strong> ${price}</p>
     `,
   };
 
@@ -154,7 +151,7 @@ app.post('/send-buchung', (req, res) => {
 
    // Construct the email message for the user
    const userMailOptions = {
-    from: 'info@skyblueparking.com', // Sender address
+    from: 'noreplyskyblueparking@gmail.com', // Sender address
     to: formData.Email, // User's email address
     subject: 'Vielen Dank für Ihre Buchung', // Email subject
     html: `
@@ -192,7 +189,6 @@ app.post('/send-buchung', (req, res) => {
     res.status(200).send('Emails sent successfully');
   });
 });
-
 
 
 // Start the server
