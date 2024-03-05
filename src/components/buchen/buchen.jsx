@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCalendarAlt, faPlaneDeparture, faPlaneArrival, faUser, faEnvelope, faPhone, faCar, faCarSide, faPalette } from "@fortawesome/free-solid-svg-icons";
+import { faClock, faCalendarAlt, faPlaneDeparture, faPlaneArrival, faUser, faEnvelope, faPhone, faCar, faCarSide, faPalette } from "@fortawesome/free-solid-svg-icons";
 import "./buchen.css";
 import Noty from "noty";
 
@@ -25,6 +25,7 @@ const BuchenCard = () => {
       Automarke: e.target.automarke.value,
       Hinflug: e.target.hinflug.value,
       Rueckflug: e.target.rueckflug.value,
+      UhrzeitAnkunft: e.target.uhrzeitankunft.value, // Add this line
       Farbe: e.target.farbe.value,
     };
 
@@ -126,6 +127,14 @@ const BuchenCard = () => {
             </label>
             <input type="tel" id="telefonnummer" name="telefonnummer" placeholder="Telefonnummer" required />
           </div>
+          <div className="form-group">
+            <label htmlFor="uhrzeitankunft">
+              <FontAwesomeIcon icon={faClock} /> {/* Replace faClock with the icon you've chosen for the time */}
+              Uhrzeit der Abgabe
+            </label>
+            <input type="time" id="uhrzeitankunft" name="uhrzeitankunft" placeholder="HH:MM" required />
+          </div>
+
   <div className="vehicle-group">
     <div className="kennzeichen">
       <label htmlFor="kennzeichen">

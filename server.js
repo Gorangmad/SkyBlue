@@ -106,18 +106,37 @@ app.post('/calculate-price', (req, res) => {
 app.post('/send-buchung', (req, res) => {
   const formData = req.body;
 
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
+  // SMTP settings provided by Namecheap
+  const smtpConfig = {
+    host: 'mail.privateemail.com', // This is the Namecheap SMTP server host
+    port: 587, // SMTP port (587 for TLS/STARTTLS, 465 for SSL)
+    secure: false, // true for 465, false for other ports
     auth: {
-      user: 'noreplyskyblueparking@gmail.com',
-      pass: "enet dimj czep wbyd" // Your Gmail password or App password
+      user: 'info@skyblueparking.com', // Your full email address
+      pass: 'Khizerkhizer1' // Your email account password
+    },
+    tls: {
+      // Do not fail on invalid certs (set to true if using self-signed certificates)
+      rejectUnauthorized: false
+    }
+  };
+  
+  const transporter = nodemailer.createTransport(smtpConfig);
+  
+  // Verify the connection configuration
+  transporter.verify(function(error, success) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Server is ready to take our messages");
     }
   });
 
 
+
   // Construct the email message
   const mailOptions = {
-    from: 'noreplyskyblueparking@gmail.com', // Sender address
+    from: 'info@skyblueparking.com', // Sender address
     to: 'info@skyblueparking.com', // Replace with the recipient's email
     subject: 'Neue Buchung', // Email subject
     html: `
@@ -133,6 +152,7 @@ app.post('/send-buchung', (req, res) => {
       <p><strong>Rueckflug Nr.:</strong> ${formData.Rueckflug}</p>
       <p><strong>Rückflug Datum:</strong> ${rueckflugDate}</p>
       <p><strong>Rückflugzeit:</strong> ${rueckflugZeit}</p>
+      <p><strong>Abgabe Uhrzeit:</strong> ${formData.UhrzeitAnkunft}</p>
       <p><strong>Farbe:</strong> ${formData.Farbe}</p>
       <p><strong>Preis:</strong> ${price}</p>
     `,
@@ -151,7 +171,7 @@ app.post('/send-buchung', (req, res) => {
 
    // Construct the email message for the user
    const userMailOptions = {
-    from: 'noreplyskyblueparking@gmail.com', // Sender address
+    from: 'info@skyblueparking.com', // Sender address
     to: formData.Email, // User's email address
     subject: 'Vielen Dank für Ihre Buchung', // Email subject
     html: `
@@ -170,6 +190,7 @@ app.post('/send-buchung', (req, res) => {
       <p><strong>Rückflug Datum:</strong> ${rueckflugDate}</p>
       <p><strong>Rückflug Zeit:</strong> ${rueckflugZeit}</p>
       <p><strong>Farbe:</strong> ${formData.Farbe}</p>
+      <p><strong>Abgabe Uhrzeit:</strong> ${formData.UhrzeitAnkunft}</p>
       <p><strong>Preis:</strong> ${price} Euro</p>
       <p>Vielen Dank! Wir freuen uns darauf, Sie zu begrüßen.</p>
       <p>Annahme und Abgabe erfolgen am Terminal1 beim Eingang B6 und beim Terminal 2 bei E8 </p>
