@@ -95,39 +95,19 @@ app.post('/calculate-price', (req, res) => {
 
   console.log(daysDifference);
 
-  // Set a price based on the days difference
-if (daysDifference >= 1 && daysDifference <= 3) {
-  price = 50;
-} else if (daysDifference >= 4 && daysDifference <= 6) {
-  price = 55;
-} else if (daysDifference >= 7 && daysDifference <= 9) {
-  price = 60;
-} else if (daysDifference == 10) {
-  price = 60;
-} else if (daysDifference >= 11 && daysDifference <= 12) {
-  price = 65;
-} else if (daysDifference >= 13 && daysDifference <= 14) {
-  price = 70;
-} else if (daysDifference >= 15 && daysDifference <= 16) {
-  price = 70;
-} else if (daysDifference >= 17 && daysDifference <= 18) {
-  price = 75;
-} else if (daysDifference >= 19 && daysDifference <= 20) {
-  price = 80;
-} else if (daysDifference >= 21 && daysDifference <= 22) {
-  price = 85;
-} else if (daysDifference >= 23 && daysDifference <= 24) {
-  price = 90;
-} else if (daysDifference >= 25 && daysDifference <= 26) {
-  price = 95;
-} else if (daysDifference >= 27 && daysDifference <= 28) {
-  price = 100;
-} else if (daysDifference >= 29 && daysDifference <= 30) {
-  price = 110;
+let price;
+if (daysDifference <= 0) {
+  price = 0; // oder ein anderer Standardwert für ungültige Eingaben
+} else if (daysDifference >= 1 && daysDifference <= 10) {
+  const prices = [55, 55, 60, 60, 65, 65, 70, 70, 75, 75];
+  price = prices[daysDifference - 1];
+} else if (daysDifference >= 11 && daysDifference <= 30) {
+  const prices = [80, 80, 85, 85, 90, 90, 110, 110, 115, 115, 120, 120, 125, 125, 130, 130, 135, 135, 140, 140];
+  price = prices[daysDifference - 11];
 } else {
-  // Default price or handle other cases not listed
-  price = 150;
+  price = 140 + (daysDifference - 30) * 5;
 }
+
 
 // Send the calculated price to the frontend
 res.status(200).json({ price });
