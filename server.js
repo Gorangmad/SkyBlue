@@ -99,14 +99,15 @@ let price;
 if (daysDifference <= 0) {
   price = 0; // oder ein anderer Standardwert für ungültige Eingaben
 } else if (daysDifference >= 1 && daysDifference <= 10) {
-  const prices = [55, 55, 60, 60, 65, 65, 70, 70, 75, 75];
+  const prices = [50, 50, 55, 55, 60, 60, 65, 65, 70, 70];
   price = prices[daysDifference - 1];
 } else if (daysDifference >= 11 && daysDifference <= 30) {
-  const prices = [80, 80, 85, 85, 90, 90, 110, 110, 115, 115, 120, 120, 125, 125, 130, 130, 135, 135, 140, 140];
+  const prices = [75, 75, 80, 80, 85, 85, 105, 105, 110, 110, 115, 115, 120, 120, 125, 125, 130, 130, 135, 135];
   price = prices[daysDifference - 11];
 } else {
-  price = 140 + (daysDifference - 30) * 5;
+  price = 135 + (daysDifference - 30) * 5;
 }
+
 
 
 // Send the calculated price to the frontend
