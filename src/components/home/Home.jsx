@@ -11,7 +11,9 @@ const Home = () => {
     <>
       <Hero />
       <AboutCard />
-      <Availability />
+      
+{/*       <Availability />
+       */}
       <VorgangCard />
       <HAbout />
 
